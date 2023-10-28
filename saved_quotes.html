@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <title>Saved Quotes</title>
+</head>
+
+<body>
+    <div class="flex justify-center align-center gap-2 text-xs pt-1_25 mb-1">
+        <a class="p-1" href="/">Home Page</a>
+        <a class="p-1" href="/advance_search.html">Advance Search</a>
+        <a class="p-1 border-bottom" href="/saved_quotes.html">Saved</a>
+    </div>
+    <dialog class="border-none rounded mx-auto px-1 container container-sm bg-white" data-modal>
+        <div class="flex justify-around align-center gap-1">
+            <p class="text-base text-dark py-0_75">
+                Quote removed from saved_quotes
+            </p>
+            <div class="flex gap-0_3">
+                <button data-undo class="p-0_3 w-5 border-none rounded bg-green">Undo</button>
+                <button data-close-modal class="p-0_3 w-5 border-none rounded bg-red"><i
+                        class="fa-solid fa-x"></i></button>
+            </div>
+        </div>
+    </dialog>
+    <div class="container-1000px place-content-center mx-auto gap-1">
+        <h1 class="text-2xl text-center">Saved Quotes</h1>
+        <li data-saved-quotes class="grid grid-cols-2 mx-auto gap-1"></li>
+    </div>
+
+    <script type="module" src="src/saved_quotes.js"></script>
+</body>
+
+</html>

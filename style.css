@@ -1,0 +1,436 @@
+:root {
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    
+    --light-blue: #646e7f;
+    --light-blue-400: #b0bcce;
+    --light-blue-100: #d2d6dd;
+    --dark: #0f1725;
+}
+/* Josh Comeau css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+
+    /* custom */
+    padding: 0;
+    font: inherit;
+}
+
+/* custom */
+html,
+body {
+    color-scheme: dark light;
+    background-color: #1e293b;
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* custom */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+/* Josh Comeau css reset end */
+
+/* background colors */
+.bg-transparent {
+    background-color: transparent;
+}
+
+.bg-white {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.bg-green {
+    background-color: #176f10;
+}
+
+.bg-red {
+    background-color: #960e0e;
+}
+
+.bg-dark-blue {
+    background-color: hsl(217, 50%, 36%);
+}
+
+.bg-dark-blue-600 {
+    background-color: #101b2b;
+}
+
+/* colors */
+.text-cyan-50 {
+    color: hsl(0, 0%, 100%);
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-light-blue-100 {
+    color: var(--light-blue-100);
+}
+
+.text-light-blue-400 {
+    color: var(--light-blue-400);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.outline-none {
+    outline: none;
+}
+
+.container-sm {
+    width: 90%;
+}
+
+@media screen and (min-width: 1000px) {
+    .container-1000px {
+        width: 1000px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* text align */
+.text-center {
+    text-align: center;
+}
+
+/* font-size */
+.text-xs {
+    font-size: .75rem;
+}
+
+.text-base {
+    font-size: 1rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+/* font-weight */
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+
+/* gaps */
+.gap-0_3 {
+    gap: .3rem;
+}
+
+.gap-0_5 {
+    gap: .5rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+/* borders */
+.border-none {
+    border: none;
+}
+
+.border {
+    border: 3px solid var(--light-blue);
+}
+
+.border-left {
+    border-left: 3px solid var(--light-blue);
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.border-1px-solid-black {
+    border: 1px solid black;
+}
+
+/* border-radius */
+.rounded {
+    border-radius: .25rem;
+}
+
+.rounded-lg {
+    border-radius: .5rem;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* flexbox */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+
+.justify-end {
+    justify-content: end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-self-start {
+    justify-self: start;
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+.self-start	{
+    align-self: flex-start;
+}
+
+/* grid */
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.place-content-center {
+    place-content: center;
+}
+
+/* Width */
+.w-full {
+    width: 100%;
+}
+
+.max-w-md {
+    max-width: 28rem;
+}
+
+.w-2 {
+    width: 2rem;
+}
+
+.w-5 {
+    width: 4rem;
+}
+
+/* height */
+.h-full {
+    height: 100%;
+}
+
+/* paddings */
+.p-0_2 {
+    padding: .2rem;
+}
+
+.p-0_3 {
+    padding: .3rem;
+}
+
+.p-0_5 {
+    padding: .5rem;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-1_5 {
+    padding: 1.5rem;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-0_5 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.py-0_75 {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-1_5 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.pt-1_25 {
+    padding-top: 1.25rem;
+}
+
+.pl-1 {
+    padding-left: 1rem;
+}
+
+/* margins */
+.m-1 {
+    margin: 1rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.my-1 {
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Position */
+.absolute {
+    position: absolute;
+}
+
+.top-20 {
+    top: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
